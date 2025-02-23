@@ -1,2 +1,8 @@
+dotenv==0.9.9
 fastapi==0.115.8
+pandas==2.2.3
+scikit-learn==1.6.1
+scipy==1.15.2
+torch==2.6.0
+tqdm==4.67.1
 uvicorn==0.34.0
