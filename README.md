@@ -125,9 +125,26 @@ A configuração principal está no arquivo `main.py`.
 
 ## Execução Local com Docker
 
-Para executar a aplicação em contêiner via Docker:
+Antes de executar a aplicação em contêiner via Docker, certifique-se que o software esteja instalado na máquina e que esteja em execução. É possível instalar o Docker através deste link: https://docs.docker.com/desktop/setup/install/windows-install/
 
-------------- EM CONSTRUÇÃO -------------
+1. Acesse o terminal e clone o repositório git:
+```
+git clone https://github.com/brenobarrosm/g1-news-recommendation-system-api.git
+```
+2. Acesse a pasta do repositório na máquina:
+```
+cd g1-news-recommendation-system-api
+```
+3. Execute os comandos docker abaixo (criação da imagem docker, do contêiner que a carregue e exposição na porta 8000):
+```
+docker build -t datathon .
+```
+```
+docker run -d -p 8000:8000 datathon
+```
+O processo pode levar alguns minutos para ser concluído. Após a execução, é possível acessar os endpoints da API através do link http://localhost:8000/api
+
+Um exemplo de acesso à API seria o link: http://localhost:8000/api/news/4 para se acessar a notícia de ID 4.
 
 ## API - Recomendação de Notícias do Portal G1
 
